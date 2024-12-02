@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Artículos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let articulo of articulos">
+      <ion-label>
+        <h2>{{ articulo.nombreProducto }}</h2>
+        <p>Precio: {{ articulo.precio }}</p>
+        <p>Tipo: {{ articulo.tipoProducto }}</p>
+        <p>{{ articulo.descripcion }}</p>
+      </ion-label>
+
+      <!-- Botón para editar el producto -->
+      <ion-button color="secondary" (click)="editarArticulo(articulo)">
+        Editar
+      </ion-button>
+
+      <!-- Botón para eliminar el producto -->
+      <ion-button color="danger" (click)="eliminarArticulo(articulo)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

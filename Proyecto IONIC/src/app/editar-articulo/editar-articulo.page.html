@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Artículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre del Producto</ion-label>
+    <ion-input [(ngModel)]="articulo.nombreProducto" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Precio</ion-label>
+    <ion-input type="number" [(ngModel)]="articulo.precio" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Tipo de Producto</ion-label>
+    <ion-select [(ngModel)]="articulo.tipoProducto" required>
+      <ion-select-option value="electronicos">Electrónicos</ion-select-option>
+      <ion-select-option value="ropa">Ropa</ion-select-option>
+      <ion-select-option value="hogar">Hogar</ion-select-option>
+      <ion-select-option value="deportes">Deportes</ion-select-option>
+      <ion-select-option value="otros">Otros</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-textarea [(ngModel)]="articulo.descripcion" rows="4" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Subir Foto</ion-label>
+    <input type="file" (change)="onFileSelected($event)" />
+  </ion-item>
+
+  <ion-button expand="full" (click)="guardarCambios()">Guardar Cambios</ion-button>
+</ion-content>

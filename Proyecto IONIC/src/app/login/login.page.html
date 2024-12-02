@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-background">
+  <div class="login-container">
+    <img src="assets\img\logo2.jpg" alt="Logo" class="logo" />
+    
+    <ion-card class="login-card">
+      <ion-card-header>
+        <ion-card-title class="card-title">Bienvenido de nuevo</ion-card-title>
+        <p class="subtitle">Inicia sesión para continuar</p>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item class="input-item">
+          <ion-label position="floating">Correo electrónico</ion-label>
+          <ion-input type="email" [(ngModel)]="email" required></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" required></ion-input>
+        </ion-item>
+
+        <!-- Botón de Iniciar Sesión -->
+        <ion-button expand="block" (click)="login()" class="login-button" color="secondary">
+          Iniciar Sesión
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

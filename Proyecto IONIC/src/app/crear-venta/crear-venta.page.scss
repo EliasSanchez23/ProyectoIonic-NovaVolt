@@ -1,0 +1,83 @@
+ion-content {
+  --background: #f3f4f6; /* Fondo gris claro profesional */
+}
+
+.navbar {
+  background-color: #004d99; /* Azul oscuro para la barra de navegación */
+}
+
+.navbar-brand, .nav-link, .footer-white {
+  color: #ffffff !important; /* Texto blanco */
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #ffffff; /* Subrayado para el elemento activo */
+}
+
+.form-control, .btn-outline-success {
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+.carousel-inner img {
+  border-radius: 10px; /* Suavizar bordes de las imágenes */
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de escala en hover */
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333333; /* Texto oscuro */
+}
+
+.card-text {
+  color: #666666; /* Texto gris para descripción */
+}
+
+.btn-primary {
+  background-color: #004d99;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0066cc; /* Color en hover */
+}
+
+.footer-white {
+  background-color: #004d99;
+  color: #ffffff;
+}
+
+.footer-white {
+  background-color: #004d99;
+  color: #ffffff !important;
+}
+
+.footer-white .text-body-secondary {
+  color: #ffffff !important;
+}
+
+.navbar {
+  background-color: #ffffff; /* Fondo blanco para la barra de navegación */
+}
+
+.navbar-brand, .nav-link {
+  color: #004d99 !important; /* Mismo azul que el footer */
+}
+
+.nav-link:hover {
+  color: #0066cc !important; /* Azul más claro en hover */
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #004d99; /* Subrayado azul para el elemento activo */
+}

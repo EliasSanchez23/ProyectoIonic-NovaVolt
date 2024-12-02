@@ -1,0 +1,24 @@
+.start-content {
+  text-align: center; /* Centra el texto */
+  padding: 20px; /* Espacio alrededor del contenido */
+}
+
+.start-content h2 {
+  font-size: 24px; /* Tamaño del título */
+  color: #d6d4d4; /* Color del título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.start-content p {
+  font-size: 16px; /* Tamaño del texto del párrafo */
+  color: #d6d4d4; /* Color del texto del párrafo */
+  margin-bottom: 20px; /* Espacio debajo del párrafo */
+}
+
+ion-button {
+  margin-top: 20px; /* Espacio superior para el botón */
+  font-weight: bold; /* Negrita para el texto del botón */
+  --box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+  --background: #3880ff; /* Color de fondo del botón */
+  --background-hover: #3171e0; /* Color de fondo del botón al pasar el mouse */
+}

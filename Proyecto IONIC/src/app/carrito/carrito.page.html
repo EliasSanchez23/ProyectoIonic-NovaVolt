@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Carrito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-background">
+  <div class="container mt-4">
+    <h2 class="text-center mb-4" style="color: #004d99;">Carrito de Compras</h2>
+
+    <div *ngIf="cartItems.length > 0; else emptyCart">
+      <!-- Lista de productos en el carrito -->
+      <div class="row">
+        <div class="col-md-8" *ngFor="let item of cartItems">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img [src]="item.image" class="img-fluid rounded-start" [alt]="item.name" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.name }}</h5>
+                  <p class="card-text">Precio: ${{ item.price }}</p>
+                  <p class="card-text">Cantidad: {{ item.quantity }}</p>
+                  <button class="btn btn-danger" (click)="removeItem(item.id)">Eliminar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resumen del carrito -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Resumen de la Compra</h5>
+              <p class="card-text">Subtotal: ${{ totals.subtotal }}</p>
+              <p class="card-text">Impuestos: ${{ totals.taxes }}</p>
+              <p class="card-text">Total: ${{ totals.total }}</p>
+              <button class="btn btn-primary w-100" (click)="proceedToCheckout()">Proceder al Pago</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #emptyCart>
+      <p class="text-center mt-5">Tu carrito está vacío.</p>
+    </ng-template>
+
+    <!-- Botón para volver atrás -->
+    <div class="mt-4 text-center">
+      <button class="btn btn-secondary" (click)="goBack()">Volver Atrás</button>
+    </div>
+  </div>
+</ion-content>
